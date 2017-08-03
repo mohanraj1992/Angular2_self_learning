@@ -10,6 +10,7 @@ import { UserComponent } from './user/user.component';
 
 import { Approute } from './app.routes';
 import { RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { RouterModule } from '@angular/router';
     SidebarComponent,
     TopbarComponent,
     DashboardComponent,
-    UserComponent
+    UserComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
