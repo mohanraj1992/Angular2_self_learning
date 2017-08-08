@@ -63,7 +63,7 @@
          <tbody>
             <tr *ngFor="let employee of employees; let i=index">
                <td>{{ employee.name }}</td>
-               <td>{{ employee.position }}</td>
+               <td>{{ employee.email }}</td>
                <td>
                   <a class="btn btn-success" (click)="editEmployee(i)"> Edit</a>
                   <a class="btn btn-danger" (click)="deleteEmployee(i)"> Delete</a>

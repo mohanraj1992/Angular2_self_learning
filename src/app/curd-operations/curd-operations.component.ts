@@ -60,7 +60,7 @@ export class CurdOperationsComponent implements OnInit {
 
   constructor(private _http: Http) { }
   ngOnInit(): void {
-        this._http.get("/src/data.json")
+        this._http.get("https://raw.githubusercontent.com/raagavendran/Angular2_self_learning/master/src/data.json")
             .subscribe((data)=> {
                 setTimeout(()=> {
                     this.employees = data.json();
