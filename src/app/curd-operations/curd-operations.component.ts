@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+declare var bootbox:any;
+
 @Component({
   selector: 'app-curd-operations',
   templateUrl: './curd-operations.component.html',
@@ -22,12 +24,12 @@ export class CurdOperationsComponent implements OnInit {
   addEmployee(){
   this.employees.push(this.model);
   this.model={};
-  this.msg="Added succesfully";
+  bootbox.alert("User Added");
   }
 
   deleteEmployee(i){
   this.employees.splice(i,1);
-  this.msg="deleted succesfully";
+  bootbox.alert("User Deleted Successfully");
   }
 
   myValue;
@@ -45,12 +47,11 @@ export class CurdOperationsComponent implements OnInit {
   {
   this.employees[i] = this.model2;
   this.model2 = {};
-  this.msg="Updated succesfully";
+  bootbox.alert("User Updated Successfully");
   }
   }
 
   }
-
 
   clickMe(){
   this.msg="";
