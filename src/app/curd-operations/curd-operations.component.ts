@@ -23,6 +23,12 @@ export class CurdOperationsComponent implements OnInit {
   model2:any={};
   msg:any="";
 
+
+  public filterQuery = "";
+  public rowsOnPage = 5;
+  public sortBy = "email";
+  public sortOrder = "asc";
+
   addEmployee(){
   this.employees.push(this.model);
   this.model={};
@@ -57,7 +63,7 @@ export class CurdOperationsComponent implements OnInit {
   clickMe(){
   this.msg="";
   }
-
+  p: number = 1;
   constructor(private _http: Http) { }
   ngOnInit(): void {
         this._http.get("https://raw.githubusercontent.com/raagavendran/Angular2_self_learning/master/src/data.json")
@@ -68,4 +74,11 @@ export class CurdOperationsComponent implements OnInit {
             });
     }
 
+  public toInt(num: string) {
+        return +num;
+    }
+
+  public sortByWordLength = (a: any) => {
+        return a.city.length;
+    }
 }

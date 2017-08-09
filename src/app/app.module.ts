@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import {DataTableModule} from "angular2-datatable";
 
 
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserComponent } from './user/user.component';
+import { DataFilterPipe }   from './curd-operations/data.filter.pipe';
 
 
 import { Approute } from './app.routes';
@@ -25,12 +27,14 @@ import { CurdOperationsComponent } from './curd-operations/curd-operations.compo
     DashboardComponent,
     UserComponent,
     LoginComponent,
-    CurdOperationsComponent
+    CurdOperationsComponent,
+    DataFilterPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    DataTableModule,
     RouterModule.forRoot(Approute)
   ],
   providers: [],
